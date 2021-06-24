@@ -1,6 +1,7 @@
 package cli
 
 import (
+	"fmt"
 	"os"
 	"strings"
 
@@ -29,7 +30,10 @@ func getExecutor(file string) func(string) {
 			log.Info().Msg("Goodbye!")
 			os.Exit(0)
 		default:
-			// TODO: Proccess commands here
+			if strings.HasPrefix(s, ".") {
+				log.Error().Msg(fmt.Sprintf("Unrecognized command '%s'", s))
+				break
+			}
 		}
 	}
 }
