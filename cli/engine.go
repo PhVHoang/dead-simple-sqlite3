@@ -1,11 +1,13 @@
 package cli
 
 import (
+	"dead-simple/core"
 	"fmt"
 	"os"
 	"strings"
 
 	"github.com/c-bata/go-prompt"
+	"github.com/gobwas/glob/compiler"
 	"github.com/rs/zerolog/log"
 )
 
@@ -33,6 +35,12 @@ func getExecutor(file string) func(string) {
 			if strings.HasPrefix(s, ".") {
 				log.Error().Msg(fmt.Sprintf("Unrecognized command '%s'", s))
 				break
+			}
+			statement, res := compiler.PrepareStatement(s)
+			if res == compiler.SUCCESS {
+				core.ExecuteStatement(statement)
+			} else {
+				log.Error().Msg(fmt.Sprintf("Unrecognized keyword at start of '%s'", s))
 			}
 		}
 	}
