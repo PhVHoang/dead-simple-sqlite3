@@ -13,6 +13,10 @@
 - [x] Added simple REPL
 <img width="658" alt="Screen Shot 2021-06-23 at 23 56 07" src="https://user-images.githubusercontent.com/12546802/123120883-a5a63380-d47f-11eb-83c8-796578945df6.png">
 
+## Barebone Core/Compiler
+<img width="648" alt="Screen Shot 2021-06-25 at 0 24 10" src="https://user-images.githubusercontent.com/12546802/123290024-e7041500-d54b-11eb-872f-f7054a8e1645.png">
+
+
 ## TODO
 - [] Core structure
 - [] SQL Parser
