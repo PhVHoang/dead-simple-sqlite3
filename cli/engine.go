@@ -22,6 +22,7 @@ func StartPrompt(file string) {
 }
 
 func getExecutor(file string) func(string) {
+	table := &core.Table{}
 	return func(s string) {
 		s = strings.TrimSpace(s)
 		s = strings.ToLower(s)
@@ -38,7 +39,7 @@ func getExecutor(file string) func(string) {
 			}
 			query, err := sqlparser.Parse(s)
 			if err == nil {
-				core.ExecuteStatement(query)
+				core.ExecuteStatement(query, table)
 			} else {
 				log.Error().Msg(fmt.Sprintf("Unrecognized keyword at start of '%s'", s))
 			}
