@@ -1,17 +1,15 @@
 package core
 
 import (
-	"dead-simple/compiler"
-
+	"github.com/marianogappa/sqlparser/query"
 	"github.com/rs/zerolog/log"
 )
 
-func ExecuteStatement(statement compiler.Statement) {
-	switch statement.Type {
-	case compiler.Insert:
+func ExecuteStatement(q query.Query) {
+	switch q.Type {
+	case query.Insert:
 		log.Info().Msg("This is where we would do an insert.")
-	case compiler.Select:
+	case query.Select:
 		log.Info().Msg("This is where we would do an select")
-
 	}
 }
