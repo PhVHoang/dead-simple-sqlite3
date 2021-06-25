@@ -21,6 +21,9 @@ Replace naive implemeted compiler with this [sqlparser](https://github.com/maria
 
 <img width="653" alt="Screen Shot 2021-06-26 at 0 39 52" src="https://user-images.githubusercontent.com/12546802/123450216-76c2c580-d617-11eb-98d7-e88b4d507f5f.png">
 
+## Implement `insert`
+<img width="652" alt="Screen Shot 2021-06-26 at 1 46 27" src="https://user-images.githubusercontent.com/12546802/123458862-7d096f80-d620-11eb-9739-88cd6e57fc12.png">
+
 
 ## TODO
 - [] Core structure
