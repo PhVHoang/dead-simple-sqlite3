@@ -26,9 +26,9 @@ Replace naive implemeted compiler with this [sqlparser](https://github.com/maria
 
 
 ## TODO
-- [] Core structure
-- [] SQL Parser
-- [] Basic statement
+- [x] Core structure
+- [x] SQL Parser
+- [x] Basic statement (insert)
 - [] ...
 ## References
 This project is heavily borrowed from
